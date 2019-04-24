@@ -1,0 +1,102 @@
+.radio {
+  margin: 16px 0;
+  display: block;
+  cursor: pointer;
+}
+.radio input.f-input {
+  display: none;
+}
+.radio input.f-input + span.f-span {
+  line-height: 22px;
+  height: 22px;
+  padding-left: 22px;
+  display: block;
+  position: relative;
+}
+.radio input.f-input + span.f-span:not(:empty) {
+  padding-left: 30px;
+}
+.radio input.f-input + span.f-span:before, .radio input.f-input + span.f-span:after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  display: block;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+.radio input.f-input + span.f-span:before {
+  background: #D1D7E3;
+  transition: background 0.2s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+}
+.radio input.f-input + span.f-span:after {
+  background: #fff;
+  transform: scale(0.78);
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+}
+.radio input.f-input:checked + span.f-span:before {
+  transform: scale(1.04);
+  background: #024102;
+}
+.radio input.f-input:checked + span.f-span:after {
+  transform: scale(0.4);
+  transition: transform 0.3s ease;
+}
+.radio:hover input.f-input + span.f-span:before {
+  transform: scale(0.92);
+}
+.radio:hover input.f-input + span.f-span:after {
+  transform: scale(0.74);
+}
+.radio:hover input.f-input:checked + span.f-span:after {
+  transform: scale(0.4);
+}
+
+.radio {
+  position: relative;
+  cursor: pointer;
+  line-height: 20px;
+  font-size: 14px;
+  margin: 15px;
+}
+.radio .label {
+  position: relative;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #C8CCD4;
+  border-radius: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+.radio .label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: white;
+  transform: scale(0);
+  transition: all 0.2s ease;
+  opacity: 0.08;
+  pointer-events: none;
+}
+input[type=radio]:checked + .label {
+  border-color: #1b351b;
+  background: #1b351b;
+}
+input[type=radio]:checked + .label:after {
+  transform: scale(1);
+  transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=radio.css.map */

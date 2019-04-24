@@ -1,0 +1,176 @@
+body{
+    background:rgba(230, 230, 230, 0.76);
+    margin:0px;
+    font-family: 'Roboto', sans-serif;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+*{
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    color:blue;
+}
+/*============================
+  * Top section 
+ =================
+ */
+.top-section{
+    background:url(../img/home-office.jpg);
+    height:290px;
+    width:100%;
+    text-align:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position-y: -80px;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.top-section img{
+    margin-top:50px;
+    width:250px;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+}
+/* ==========================
+ * Form Fields 
+ ===============
+*/
+.forms .box:hover{
+    margin-top:-110px;
+    transition:.3s;
+}
+
+.forms .box{
+    transition:.3s;
+    font-family: 'Roboto', sans-serif;
+    background:white;
+    border-top:10px solid green;
+    padding:20px 40px 10px;
+    width:630px;
+    margin:auto;
+    margin-top:-105px;
+    background-attachment: fixed;
+    border-bottom:10px solid green;
+    box-shadow:4px 4px 40px rgba(0, 0, 0, 0.37);
+    margin-bottom:30px;
+}
+.h1{
+    font-size:34px;
+    font-weight:bold;
+}
+p{
+    font-size:15px;
+}
+.label{
+    font-size:25px;
+    font-weight:lighter;
+}
+small{
+    color:red;
+}
+form{
+    display:grid;
+    grid-template-columns:auto;
+    grid-gap: 20px;
+}
+.input{
+    padding:20px 20px 3px;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    width:70%;
+    font-size:17px;
+    word-wrap: break-word;
+    color:silver;
+
+}
+input:focus{
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    -webkit-border-before: none;
+    -webkit-border-before-color: none;
+    -webkit-border-before-style: none;
+    outline:none;
+}
+.input_container{
+    display: inline-block;
+    text-align: center;
+    width:50%;
+}
+.awsome_input{
+    padding:20px 0px 3px;
+    border: none;
+    background: transparent;
+    display: block;
+}
+  
+.awsome_input_border{
+    display:inline-block;
+    width:0px;
+    height: 2px;
+    background: green;
+    position: relative;
+    top:-5px;
+    left:-49px;
+    -webkit-transition: all ease-in-out .15s;
+    -o-transition: all ease-in-out .15s;
+    transition: all ease-in-out .15s;
+}
+input[type="date"]{
+    font-size:17px;
+}
+.awsome_input:hover,
+.awsome_input:active, 
+.awsome_input:focus{
+    outline: none;
+}
+.awsome_input:hover+.awsome_input_border,
+.awsome_input:active+.awsome_input_border, 
+.awsome_input:focus+.awsome_input_border{
+    width:70%;
+
+}
+input[type="date"]:hover+.awsome_input_border,
+input[type="date"]:active+.awsome_input_border,
+input[type="date"]:focus+.awsome_input_border{
+    width:67%;
+}
+.button{
+    margin-top:40px;
+    background:rgb(27, 53, 27);
+    color:white;
+    width:100px;
+    border-radius:6px;
+    padding: 13px 25px 10px;
+    border: 1px solid rgb(27, 53, 27);
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor:pointer;
+    transition:.5s;
+}
+.button:hover{
+    transition:.5s;
+    box-shadow:4px 3px 30px rgba(0, 0, 0, 0.164);
+}
+
+/*==============================
+ *  Footer 
+ ================
+ */
+.footer{
+    text-align:center;
+    margin-top:70px;
+}
+.footer img{
+    filter: blur(1px);
+    -webkit-filter: blur(2px);
+    height:30px;
+    padding-bottom:20px;
+}
+.footer p{
+    color:silver;
+    text-align:center;
+}

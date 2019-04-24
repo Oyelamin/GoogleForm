@@ -1,0 +1,120 @@
+$radioSize: 22px
+$radioBorder: #D1D7E3
+$radioActive: #5D9BFB
+$primary: #225CFF
+$gray: #C8CCD4
+
+.radio 
+    margin: 16px 0
+    display: block
+    cursor: pointer
+    input.f-input 
+        display: none
+        & + span.f-span 
+            line-height: $radioSize
+            height: $radioSize
+            padding-left: $radioSize
+            display: block
+            position: relative
+            &:not(:empty) 
+                padding-left: $radioSize + 8
+            
+            &:before,
+            &:after 
+                content: ''
+                width: $radioSize
+                height: $radioSize
+                display: block
+                border-radius: 50%
+                left: 0
+                top: 0
+                position: absolute
+            
+            &:before 
+                background: $radioBorder
+                transition: background .2s ease, transform .4s cubic-bezier(.175, .885, .32, 2)
+            
+            &:after 
+                background: #fff
+                transform: scale(.78)
+                transition: transform .6s cubic-bezier(.175, .885, .32, 1.4)
+            
+        
+        &:checked + span.f-span
+            &:before 
+                transform: scale(1.04)
+                background: rgb(2, 65, 2)
+            
+            &:after 
+                transform: scale(.4)
+                transition: transform .3s ease
+            
+        
+    
+    &:hover 
+        input.f-input 
+            & + span.f-span
+                &:before 
+                    transform: scale(.92)
+                
+                &:after 
+                    transform: scale(.74)
+                
+            
+            &:checked + span.f-span
+                &:after 
+                    transform: scale(.4)
+
+.radio
+  position: relative
+  cursor: pointer
+  line-height: 20px
+  font-size: 14px
+  margin: 15px
+  .label
+    position: relative
+    display: block
+    float: left
+    margin-right: 10px
+    width: 20px
+    height: 20px
+    border: 2px solid $gray
+    border-radius: 100%
+    -webkit-tap-highlight-color: transparent
+    &:after
+      content: ''
+      position: absolute
+      top: 5px
+      left: 5px
+      width: 10px
+      height: 10px
+      border-radius: 100%
+      background: white
+      transform: scale(0)
+      transition: all .2s ease
+      opacity: .08
+      pointer-events: none
+    &:hover
+        .label:after
+        // transform: scale(3.6)
+    
+  
+input[type="radio"]:checked + .label
+  border-color: rgb(27, 53, 27)
+  background: rgb(27, 53, 27)
+  &:after
+    transform: scale(1)
+    transition: all .2s cubic-bezier(.35,.9,.4,.9)
+    opacity: 1
+
+.cntr
+//   position: absolute
+  top: calc(50% - 10px)
+  left: 0
+  width: 100%
+  text-align: center
+
+.hidden
+  display: none
+  
+

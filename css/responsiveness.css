@@ -1,0 +1,27 @@
+@media screen and (max-width: 1024px){
+    .forms .box{
+        width:250px;
+    }
+    .h1{
+        font-size:30px;
+    }
+    .awsome_input_border{
+        left:-1px;
+    }
+    .input{
+        width:100%;
+    }
+    .awsome_input:hover+.awsome_input_border,
+    .awsome_input:active+.awsome_input_border, 
+    .awsome_input:focus+.awsome_input_border{
+        width:100%;
+    }
+    input[type="date"]{
+        width:139px;
+    }
+    input[type="date"]:hover+.awsome_input_border,
+    input[type="date"]:active+.awsome_input_border,
+    input[type="date"]:focus+.awsome_input_border{
+        width:100%;
+    }
+}
